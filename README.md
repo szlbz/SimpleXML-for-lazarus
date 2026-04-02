@@ -198,6 +198,19 @@ end;
 ```
 
 # 10.使用 LoadXMLFromFile 读取该文件、解析内容、修改并另存为新文件的完整 Demo
+假设你有一个名为 config.xml 的配置文件，内容如下：  
+```
+<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <App>MyApp</App>
+  <Window Width="800" Height="600" />
+  <Users>
+    <User>Admin</User>
+    <User>Guest</User>
+  </Users>
+</Settings>
+``
+
 ```pascal
 procedure TForm1.Button14Click(Sender: TObject);
 var
