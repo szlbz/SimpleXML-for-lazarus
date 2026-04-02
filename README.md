@@ -196,3 +196,48 @@ begin
   // }
 end;
 ```
+
+# 10.使用 LoadXMLFromFile 读取该文件、解析内容、修改并另存为新文件的完整 Demo
+```pascal
+procedure TForm1.Button14Click(Sender: TObject);
+var
+  xml: IXmlNode;
+  userList: IXmlNodeList;
+  w, h: Integer;
+begin
+  try
+    // 1. 从文件加载 XML
+    // 注意：如果文件不存在或格式错误，这里会抛出异常
+    xml := LoadXMLFromFile('config.xml');
+
+    // 2. 读取普通节点的文本
+    ShowMessage('当前应用名称: ' + xml.GetS('App'));
+
+    // 3. 读取节点的属性 (路径直接写 Window/@Width)
+    w := xml.GetI('Window/@Width');
+    h := xml.GetI('Window/@Height');
+    ShowMessage(Format('窗口大小: %d x %d', [w, h]));
+
+    // 4. 获取列表并遍历
+    userList := xml.Nodes['Users/User']; // 获取 Users 下的所有 User 节点
+    ShowMessage(Format('共有 %d 个用户', [userList.Count]));
+    if userList.Count > 0 then
+      ShowMessage('第一个用户是: ' + userList[0].Text);
+
+    // 5. 动态修改数据
+    xml.SetS('App', 'MyApp Pro');      // 修改应用名称
+    xml.SetI('Window/@Width', 1024);   // 修改窗口宽度
+
+    // 6. 将修改后的内容另存为新文件
+    xml.SaveToFile('config_new.xml');
+    ShowMessage('修改完成并已保存为 config_new.xml');
+
+  except
+    on E: Exception do
+    begin
+      // 捕获并提示错误（例如文件找不到、XML语法错误等）
+      ShowMessage('加载XML失败: ' + E.Message);
+    end;
+  end;
+end;
+```
