@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="2"/>
+        <CursorPos X="38" Y="13"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="178"/>
+        <CursorPos X="13" Y="195"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="simplejson.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SimpleJSON"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="736"/>
+        <CursorPos X="23" Y="746"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="simplexml.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SimpleXML"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="566"/>
+        <CursorPos Y="592"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../fpcsrc/packages/fcl-json/src/fpjson.pp"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="33"/>
+        <CursorPos X="27" Y="48"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../fpcsrc/packages/fcl-xml/src/xmlwrite.pp"/>
+        <UnitName Value="XMLWrite"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="110"/>
+        <CursorPos X="11" Y="123"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="readmeXML.md"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="231"/>
+        <CursorPos Y="257"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="config.xml"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos Y="10"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="XML"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="171" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="353" TopLine="338"/>
+      </Position>
+      <Position>
+        <Filename Value="simplexml.pas"/>
+        <Caret Line="835" TopLine="822"/>
+      </Position>
+      <Position>
+        <Filename Value="readmeXML.md"/>
+        <Caret Line="198" Column="4" TopLine="172"/>
+      </Position>
+      <Position>
+        <Filename Value="readmeXML.md"/>
+      </Position>
+      <Position>
+        <Filename Value="readmeXML.md"/>
+        <Caret Line="177" Column="4" TopLine="155"/>
+      </Position>
+      <Position>
+        <Filename Value="simplexml.pas"/>
+        <Caret Column="15"/>
+      </Position>
+      <Position>
+        <Filename Value="simplexml.pas"/>
+        <Caret Line="935" Column="5" TopLine="911"/>
+      </Position>
+      <Position>
+        <Filename Value="simplexml.pas"/>
+        <Caret Line="704" TopLine="678"/>
+      </Position>
+      <Position>
+        <Filename Value="simplexml.pas"/>
+        <Caret Line="703" TopLine="691"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="165" Column="29" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="362" TopLine="337"/>
+      </Position>
+      <Position>
+        <Filename Value="simplexml.pas"/>
+        <Caret Line="87" Column="13" TopLine="67"/>
+      </Position>
+      <Position>
+        <Filename Value="simplexml.pas"/>
+        <Caret Line="982" Column="3" TopLine="959"/>
+      </Position>
+      <Position>
+        <Filename Value="simplexml.pas"/>
+        <Caret Line="87" Column="10" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="362" TopLine="337"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="369" TopLine="344"/>
+      </Position>
+      <Position>
+        <Filename Value="readmeXML.md"/>
+        <Caret Line="112" Column="10" TopLine="172"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="215" TopLine="190"/>
+      </Position>
+      <Position>
+        <Filename Value="simplexml.pas"/>
+        <Caret Line="979" Column="25" TopLine="959"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="164" Column="3" TopLine="139"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="208" TopLine="169"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="248" TopLine="224"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="247" TopLine="223"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="215" TopLine="191"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="214" TopLine="190"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="57" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="56" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="32" TopLine="20"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

@@ -1,0 +1,123 @@
+object Form1: TForm1
+  Left = 331
+  Height = 310
+  Top = 32
+  Width = 618
+  Caption = 'Form1'
+  ClientHeight = 310
+  ClientWidth = 618
+  Position = poScreenCenter
+  LCLVersion = '4.6.0.0'
+  object Memo1: TMemo
+    Left = 16
+    Height = 214
+    Top = 152
+    Width = 578
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Lines.Strings = (
+      'Memo1'
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+    WordWrap = False
+  end
+  object Button4: TButton
+    Left = 29
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = 'Button4'
+    TabOrder = 1
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 124
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = '1'
+    TabOrder = 2
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 208
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = '2'
+    TabOrder = 3
+    OnClick = Button6Click
+  end
+  object Button7: TButton
+    Left = 288
+    Height = 25
+    Top = 48
+    Width = 66
+    Caption = '3'
+    TabOrder = 4
+    OnClick = Button7Click
+  end
+  object Button8: TButton
+    Left = 355
+    Height = 25
+    Top = 48
+    Width = 73
+    Caption = '4'
+    TabOrder = 5
+    OnClick = Button8Click
+  end
+  object Button9: TButton
+    Left = 432
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = '5'
+    TabOrder = 6
+    OnClick = Button9Click
+  end
+  object Button10: TButton
+    Left = 512
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = '6'
+    TabOrder = 7
+    OnClick = Button10Click
+  end
+  object Button11: TButton
+    Left = 29
+    Height = 25
+    Top = 81
+    Width = 75
+    Caption = '7'
+    TabOrder = 8
+    OnClick = Button11Click
+  end
+  object Button12: TButton
+    Left = 125
+    Height = 28
+    Top = 77
+    Width = 75
+    Caption = '8'
+    TabOrder = 9
+    OnClick = Button12Click
+  end
+  object Button13: TButton
+    Left = 208
+    Height = 25
+    Top = 80
+    Width = 75
+    Caption = '9'
+    TabOrder = 10
+    OnClick = Button13Click
+  end
+  object Button14: TButton
+    Left = 288
+    Height = 25
+    Top = 81
+    Width = 75
+    Caption = '10'
+    TabOrder = 11
+    OnClick = Button14Click
+  end
+end
