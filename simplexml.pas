@@ -513,19 +513,48 @@ function TXmlNode.GetNodes(const Name: string): IXmlNodeList;
 var
   Child: TDOMNode;
   List: TXmlNodeList;
+  SlashPos: Integer;
+  FirstPart, RestPart: string;
+  ParentNodes: IXmlNodeList;
+  ChildList: IXmlNodeList;
+  i, j: Integer;
 begin
-  List := TXmlNodeList.Create(False);
-  if FNodeType = ntElement then
+  // 新增：支持路径解析（如 'Users/User'）
+  SlashPos := Name.IndexOf('/');
+  if SlashPos > 0 then
   begin
-    Child := FElement.FirstChild;
-    while Assigned(Child) do
+    FirstPart := Name.Substring(0, SlashPos);
+    RestPart := Name.Substring(SlashPos + 1);
+
+    // 递归获取上一层的节点列表
+    ParentNodes := GetNodes(FirstPart);
+    List := TXmlNodeList.Create(False);
+
+    // 将每一层匹配到的子节点合并到最终结果中
+    for i := 0 to ParentNodes.Count - 1 do
     begin
-      if (Child.NodeType = ELEMENT_NODE) and (TDOMElement(Child).TagName = Name) then
-        List.Add(TXmlNode.Create(FDocument, TDOMElement(Child), False));
-      Child := Child.NextSibling;
+      ChildList := ParentNodes[i].GetNodes(RestPart);
+      for j := 0 to ChildList.Count - 1 do
+        List.Add(ChildList[j]);
     end;
+    Result := List;
+  end
+  else
+  begin
+    // 原有逻辑：仅查找直接子节点
+    List := TXmlNodeList.Create(False);
+    if FNodeType = ntElement then
+    begin
+      Child := FElement.FirstChild;
+      while Assigned(Child) do
+      begin
+        if (Child.NodeType = ELEMENT_NODE) and (TDOMElement(Child).TagName = Name) then
+          List.Add(TXmlNode.Create(FDocument, TDOMElement(Child), False));
+        Child := Child.NextSibling;
+      end;
+    end;
+    Result := List;
   end;
-  Result := List;
 end;
 
 function TXmlNode.GetPath(const Path: string): string;
@@ -687,19 +716,6 @@ begin
   else if FNodeType = ntText then
     FTextNode.TextContent := '';
 end;
-
-//function TXmlNode.ToXML: string;
-//var
-//  Stream: TStringStream;
-//begin
-//  Stream := TStringStream.Create('');
-//  try
-//    WriteXML(FElement, Stream);
-//    Result := Stream.DataString;
-//  finally
-//    Stream.Free;
-//  end;
-//end;
 
 function TXmlNode.ToXML: string;
 var
