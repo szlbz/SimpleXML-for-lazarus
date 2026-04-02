@@ -688,14 +688,63 @@ begin
     FTextNode.TextContent := '';
 end;
 
+//function TXmlNode.ToXML: string;
+//var
+//  Stream: TStringStream;
+//begin
+//  Stream := TStringStream.Create('');
+//  try
+//    WriteXML(FElement, Stream);
+//    Result := Stream.DataString;
+//  finally
+//    Stream.Free;
+//  end;
+//end;
+
 function TXmlNode.ToXML: string;
 var
   Stream: TStringStream;
+  s: string;
+  i: Integer;
+  InTag: Boolean;
+  sb: TStringBuilder;
 begin
   Stream := TStringStream.Create('');
   try
+    // 先按默认格式生成
     WriteXML(FElement, Stream);
-    Result := Stream.DataString;
+    s := Stream.DataString;
+
+    // 手动剔除节点间的换行和缩进，实现真正的紧凑格式
+    sb := TStringBuilder.Create;
+    try
+      InTag := False;
+      for i := 1 to Length(s) do
+      begin
+        if s[i] = '<' then
+        begin
+          // 遇到新标签开始前，把缓冲区末尾残留的换行和空格全删掉
+          while (sb.Length > 0) and CharInSet(sb[sb.Length], [#13, #10, ' ', #9]) do
+            sb.Remove(sb.Length - 1, 1);
+          sb.Append(s[i]);
+          InTag := True;
+        end
+        else if s[i] = '>' then
+        begin
+          sb.Append(s[i]);
+          InTag := False;
+        end
+        else if InTag or not CharInSet(s[i], [#13, #10, ' ', #9]) then
+        begin
+          // 在标签内部（如属性），或者不在标签内且不是空白字符，直接追加
+          sb.Append(s[i]);
+        end;
+        // else: 忽略标签外部的换行和空格（即原本的缩进）
+      end;
+      Result := sb.ToString;
+    finally
+      sb.Free;
+    end;
   finally
     Stream.Free;
   end;
