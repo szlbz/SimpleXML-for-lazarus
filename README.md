@@ -1,4 +1,10 @@
 ### 注意：读写时不要加根节点名称  
+如xml.Nodes['Stu']就可以，不要用xml.Nodes['Students/Stu']:  
+```
+  xml := ParseXML('<Students><Stu>甲</Stu><Stu>乙</Stu><Stu>丙</Stu></Students>');
+  list := xml.Nodes['Stu'];
+```
+
 # 1. 从零构建 XML (动态创建)
 由于 TXmlNode 被隐藏在 implementation 区，外部不能直接 Create。我们可以通过解析一个空根节点来作为起点，然后动态添加子节点和文本。
 
